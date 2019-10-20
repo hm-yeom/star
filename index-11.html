@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{background:black;}
+
+		.star4 {width:100px; height:10px; 
+				background: rgb(255,0,255);
+				position: absolute; 
+				animation: rr 0.5s;
+				right: 50px; opacity:0; 
+				transform: rotate(45deg);}	
+
+		@keyframes rr{
+			from {left:0px; top:0px; opacity:1;}
+			to {left:800px; top:800px; opacity:0}}
+
+
+		.star2{width:200px; height:20px; 
+				background: rgb(255,0,255);
+				position: absolute; 
+				animation: ri 0.6s;
+				right: 50px; opacity:0; 
+				transform: rotate(45deg);}
+
+		@keyframes ri{
+			from {left:0px; top:0px; opacity:1;}
+			to {left:300px; top:300px; opacity:0.5}}	
+
+
+
+		.star5 {width:500px; height:10px; 
+				background: rgb(255,0,255);
+				position: absolute; 
+				animation: r1s;
+				right: 50px; opacity:0; 
+				transform: rotate(45deg);}	
+
+		@keyframes r{
+			from {left:0px; top:0px; opacity:1;}
+			to {left:400px; top:400px; opacity:0}}			
+
+	
+		.star6 {width:400px; height:30px; 
+				background: rgb(255,0,255);
+				position: absolute; 
+				animation: ra 0.8s;
+				right: 50px; opacity:0; 
+				transform: rotate(45deg);}							
+
+		@keyframes ra{
+			from {left:0px; top:0px; opacity:1;}
+			to {left:200px; top:1000px; opacity:0}}	
+
+
+		.star7 {width:450px; height:20px; 
+				background: rgb(255,0,255);
+				position: absolute; 
+				animation: rb 1s;
+				right: 100px; opacity:0; 
+				transform: rotate(45deg);}							
+
+		@keyframes rb{
+			from {left:0px; top:0px; opacity:1;}
+			to {left:100px; top:600px; opacity:0}}				
+	
+		#ss{width: 300px; margin-bottom: -200px;}
+		#p{width: 150px; margin-bottom: -200px; margin-left:-80px; opacity:0.3;}	
+		#c{width: 50px; margin-top:300px; margin-left: -350px; opacity: 0.5;}
+		#s{height:200px; margin-bottom:100px; margin-left: -200px;}		
+		#e{width: 100px; margin-bottom:200px; margin-left: 500px;}		
+		
+		#f{width:500px; margin-top:-200px; margin-left: 800px;}	
+
+	</style>
+</head>
+
+<body>
+
+	<img src="star4.gif" id="ss">
+	<img src="p3.png" id="p">
+	<img src="c.png" id="c">
+	<img src="e.png" id="e">
+	<img src="star2.gif" id="s">	
+	<img src="f2.png" id="f">	
+
+
+	<div class="star2" id="s2"></div>
+	<script>
+	for(var i=0; i<800; i++){
+		var tt = s2.cloneNode(true);
+		tt.id = i;
+		tt.style.animationDelay = i * 0.5 + "s";
+		tt.style.right = i*20 + "px";
+		tt.style.animationDuration = "0.3s";
+		tt.style.height = Math.random()*15 + "px";
+		tt.style.width = 150 + "px";
+		tt.style.background = rgbmake();
+		document.body.appendChild(tt);
+	}
+	function rgbmake(){
+		var a = randomBH(100,255);
+		var b = Math.random()*255;
+		var c = Math.random()*255;
+		var d ="rgb("+a+","+b+","+c+")";
+		return d;
+	}
+	function randomBH(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	</script>	
+	
+
+	<div class="star4" id="s4"></div>
+	<script>
+	for(var i=0; i<1000; i++){
+		var tt = s4.cloneNode(true);
+		tt.id = i;
+		tt.style.animationDelay = i * 1 + "s";
+		tt.style.right = i*30 + "px";
+		tt.style.animationDuration = "0.8s";
+		tt.style.height = Math.random()*10 + "px";
+		tt.style.width = 400 + "px";
+		tt.style.background = rgbmake();
+		document.body.appendChild(tt);
+	}
+	function rgbmake(){
+		var a = randomBH(100,450);
+		var b = Math.random()*250;
+		var c = Math.random()*250;
+		var d ="rgb("+a+","+b+","+c+")";
+		return d;
+	}
+	function randomBH(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	</script>		
+
+	<div class="star5" id="s5"></div>
+	<script>
+	for(var i=0; i<1000; i++){
+		var tt = s5.cloneNode(true);
+		tt.id = i;
+		tt.style.animationDelay = i * 0.5 + "s";
+		tt.style.right = i*50 + "px";
+		tt.style.animationDuration = "0.8s";
+		tt.style.height = Math.random()*10 + "px";
+		tt.style.width = 250 + "px";
+		tt.style.background = rgbmake();
+		document.body.appendChild(tt);
+	}
+	function rgbmake(){
+		var a = randomBH(100,450);
+		var b = Math.random()*250;
+		var c = Math.random()*250;
+		var d ="rgb("+a+","+b+","+c+")";
+		return d;
+	}
+	function randomBH(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	</script>	
+
+<div class="star6" id="s6"></div>
+	<script>
+	for(var i=0; i<800; i++){
+		var tt = s6.cloneNode(true);
+		tt.id = i;
+		tt.style.animationDelay = i * 0.5 + "s";
+		tt.style.right = i*20 + "px";
+		tt.style.animationDuration = "0.3s";
+		tt.style.height = Math.random()*15 + "px";
+		tt.style.width = 150 + "px";
+		tt.style.background = rgbmake();
+		document.body.appendChild(tt);
+	}
+	function rgbmake(){
+		var a = randomBH(100,255);
+		var b = Math.random()*255;
+		var c = Math.random()*255;
+		var d ="rgb("+a+","+b+","+c+")";
+		return d;
+	}
+	function randomBH(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	</script>	
+
+<div class="star7" id="s7"></div>
+	<script>
+	for(var i=0; i<800; i++){
+		var tt = s7.cloneNode(true);
+		tt.id = i;
+		tt.style.animationDelay = i * 1 + "s";
+		tt.style.right = i*40 + "px";
+		tt.style.animationDuration = "0.3s";
+		tt.style.height = Math.random()*20 + "px";
+		tt.style.width = 200 + "px";
+		tt.style.background = rgbmake();
+		document.body.appendChild(tt);
+	}
+	function rgbmake(){
+		var a = randomBH(100,255);
+		var b = Math.random()*255;
+		var c = Math.random()*255;
+		var d ="rgb("+a+","+b+","+c+")";
+		return d;
+	}
+	function randomBH(min, max) {
+	  min = Math.ceil(min);
+	  max = Math.floor(max);
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	</script>	
+
+</body>
+</html>
